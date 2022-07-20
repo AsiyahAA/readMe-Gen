@@ -10,18 +10,13 @@ inquirer
     },
     {
         type: 'input',
-        name: 'contents',
-        message: 'Table of Contents:',
-    },
-    {
-        type: 'input',
         name: 'description',
         message: 'Project Description:',
     },
     {
         type: 'input',
         name: 'installation',
-        message: 'Project Installation',
+        message: 'Project Installation:',
       },
       {
         type: 'input',
@@ -32,7 +27,7 @@ inquirer
         type: 'list',
         name: 'license',
         message: 'Project License:',
-        choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "none"]
+        choices: ["MIT", "APACHE2.0", "GPL3.0", "BSD3", "none"]
       },
       {
         type: 'input',
@@ -46,13 +41,13 @@ inquirer
       },
       {
         type: 'input',
-        name: 'questions',
+        name: 'github',
         message: 'Enter GitHub Username:',
       },
       {
         type: 'input',
-        name: 'contact',
-        message: 'Email for further contact (Enter Email Link):',
+        name: 'questions',
+        message: 'Enter Email:',
       },
   ])
   .then(ans=>{
@@ -67,8 +62,8 @@ inquirer
 [License](#license) \n
 [Contributors](#contributing) \n
 [Tests](#tests) \n
+[GitHub](#github) \n
 [Questions?](#questions) \n
-[Contact](#contact) \n
 
 ## Description
 ${ans.description}
@@ -88,11 +83,12 @@ ${ans.contributing}
 ## Tests
 ${ans.tests}
 
-## Questions?
-[GitHub](https://github.com/${ans.questions})
+## GitHub
+Checkout my [GitHub](https://github.com/${ans.github})
 
-## Contact
-${ans.contact}`
+## Questions?
+Contact me via Email ${ans.questions}`
+
 
     const userAns = ans.title
     // const lowerCase = lower.toLowerCase()
